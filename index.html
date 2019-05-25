@@ -54,7 +54,7 @@
 								<p>All my experience led me to the cloud-computing software industry working for the leading hyper-converged infrastructure (HCI) company, Nutanix as a Systems Reliability Engineer 1 (SRE1), fixing business critical solutions for customers ranging from PayPal to the Department of Defense. I am proud to say that I am a part of an exceptional support organization with the highest Net Promotor Score (NPS) and Customer Satisfaction Rating (CSAT) in the industry while working with customers from Paypal to the Department of Defense.</p>
 								<p>Since joining Nutanix, not only have I continued learning technically at a rapid pace, but I've also continued developing my customer management skills. After about 1 year and 2 months at Nutanix, I was promoted to SRE2, chosen for a new Support Concierge Program for new potentially large accounts, and selected after interviewing to coordinate the SRE1 new hire training.</p>
 								<p>In addition to my work at Nutanix, in my spare time, I also enjoy helping friends and family by developing and managing websites for their small businesses, testing business ideas and building prototypes of my own, playing and watching soccer, traveling, gardening medicinal and edible plants, and since 2018, scuba diving.</p>
-								<p>For more information about my entrepreneurial projects and career work, see my <a href="#work">work page</a> or <a href="https://www.linkedin.com/in/samuelgeddy/">LinkedIn</a>, and for more information about my personal ventures, check out my <a href="#hobbies">hobbies page</a>.<p>
+								<p>For more information about my career, see my <a href="#career">career page</a> or my <a href="https://www.linkedin.com/in/samuelgeddy/">LinkedIn</a>. To learn more about my personal projects, see my <a href="#projects">projects page</a>. And for more information about my personal interests, check out my <a href="#hobbies">hobbies page</a>.<p>
 								<p>To contact me, drop me a line from my <a href="#contact">contact page</a> or email me at samuelgeddy@gmail.com.</p>
 							</article>
 
@@ -65,17 +65,22 @@
 								<h3>VMware Purple Screen of Death (PSOD) Error Translator</h3>
 								<form class="form-group has-success" id="form">
 								<div class="instructions">
-									<blockquote> 
-										MCE errors are caused by hardware failures and cause ESXi servers to PSOD.
-										The MCi_STATUS register is useful in debugging the PSOD.
-										<br><br>The MCi_STATUS register consists of information about the machine check error.
-										The register is displayed next to the “S:” as shown in the example below. <br><br>MC: PCPU18 B:13 <strong>S:0xfe20004000011166</strong> M:0x7246040086 A:0x38c989b100 5
+									<p>
+										As a Systems Reliability Engineer (SRE) at Nutanix, I often work with customers troubleshooting hardware failures, and this often means translating the VMware Purple Screen of Death (PSOD). 
+										When hardware fails on an ESXi servers, we need to look at the <a href="https://en.wikipedia.org/wiki/Machine-check_exception" target="external">  Machine Check Exception (MCE)</a> that's included in the PSOD to determine what hardware has failed.
+										Specifically, the MCi_STATUS register within the MCE can tell us what we need to replace. <br><br>
+										The MCi_STATUS register is displayed next to the “S:” as shown in the example below. <br><br>MC: PCPU18 B:13 <strong>S:0xfe20004000011166</strong> M:0x7246040086 A:0x38c989b100 5
 										<br><br>
+										Before I built this translator, we had to translate the MCi_STATUS register manually by following the steps in the VMware KB referenced below.
+										Working through through the KB takes a fair amount of time and adds the risk for error, so when I learned Nutanix nor VMware had an automated tool to translate the error, I decided to build one.
+										<br>
 										<a href="https://kb.vmware.com/s/article/1005184" target="external"><strong>Reference:</strong> <u>VMware KB - Decoding Machine Check Exception (MCE) output after a purple screen error (1005184)</u></a>
-									</blockquote>
-									<h3>How to Debug:</h3>
-									Simply input the last 4 characters of the MCi_STATUS code below and click Debug.
+									</p>
+									
+									<h3>How to Use:</h3>
+									Simply input <strong>the last 4 characters</strong> of the MCi_STATUS code below and click Debug.
 								</div>
+								<br>
 								<p>
 									<strong>MCi_STATUS Code:</strong><br> <input id="code" type="text" maxlength="4" size="4" name="status"><br>
 									<br>
@@ -97,8 +102,11 @@
 						<!-- Hobbies -->
 							<article id="hobbies">
 								<h2 class="major">Hobbies</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+								<h3>SCUBA DIVING</h3>
+								<span class="image main"><img src="images/P1222337.jpg" alt="" /></span>
+								<h4>"I work well under pressure."</h4>
+								<p>During my 2015 / 2016 Thailand trip, I snorkeled in the ocean for the first time around the beauitful Phi Phi Islands. The reef was probably 15 or 20 feet below us, so wanting to get a closer look, I learned to dive down while equalizing the pressure in my ear cavities. It was a lot of fun, but I could only stay down for 30 seconds max, because of the higher pressure and physical exertion.<br><br>It was this day that the seeds of scuba diving were planted.</p>
+								<p>About 2 and a half years later, the seeds had taken root, and I had achieved my dream of learning to scuba. I earned my <a href="https://www.padi.com/courses/open-water-diver"> PADI Open Water Diver Certification</a> in the Fall of 2018 with <a href="http://www.carolinadivecenter.com/"> Carolina Dive Center</a> out of Raleigh, North Carolina, and shortly there after, I did my first ocean dives in Playa Del Carmen and Cozumel, Mexico. Since then, I've dove shipwrecks off the coast of North Carolina in the Graveyward of the Atlantic and formed plans to dive across the globe, including the place where it all started - Thailand.<br><br>
 							</article>
 
 						<!-- Contact -->
@@ -378,12 +386,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; <a href="https://samueleddy.com/#entrepreneurship">Eddy Website Develoment. 2019</a>.</p><br>
 						<ul class="icons">
-										<li><a href="https://www.linkedin.com/in/samuelgeddy/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://www.facebook.com/seddy2392" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="https://github.com/sgeddy" class="icon fa-github"><span class="label">Github</span></a></li>
-									</ul>
+							<li><a href="https://www.linkedin.com/in/samuelgeddy/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.facebook.com/seddy2392" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/sgeddy" class="icon fa-github"><span class="label">Github</span></a></li>
+						</ul>
+						<br>
+						<p class="copyright">&copy; <a href="https://samueleddy.com/#entrepreneurship">Eddy Website Develoment. 2019</a>.</p>
 					</footer>
 
 			</div>
