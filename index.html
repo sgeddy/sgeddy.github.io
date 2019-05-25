@@ -66,18 +66,18 @@
 								<form class="form-group has-success" id="form">
 								<div class="instructions">
 									<p>
-										As a Systems Reliability Engineer (SRE) at Nutanix, I often work with customers troubleshooting hardware failures, and this often means translating the VMware Purple Screen of Death (PSOD). 
-										When hardware fails on an ESXi servers, we need to look at the <a href="https://en.wikipedia.org/wiki/Machine-check_exception" target="external">  Machine Check Exception (MCE)</a> that's included in the PSOD to determine what hardware has failed.
+										As a Systems Reliability Engineer (SRE) at Nutanix, I often work with customers troubleshooting hardware failures on ESXi clusters, which regularly includes the VMware Purple Screen of Death (PSOD). 
+										When hardware fails on an ESXi servers and a PSOD is generated at boot, we have to look at the <a href="https://en.wikipedia.org/wiki/Machine-check_exception" target="external">  Machine Check Exception (MCE)</a> that's included in the PSOD to determine what hardware has failed.
 										Specifically, the MCi_STATUS register within the MCE can tell us what we need to replace. <br><br>
 										The MCi_STATUS register is displayed next to the “S:” as shown in the example below. <br><br>MC: PCPU18 B:13 <strong>S:0xfe20004000011166</strong> M:0x7246040086 A:0x38c989b100 5
 										<br><br>
 										Before I built this translator, we had to translate the MCi_STATUS register manually by following the steps in the VMware KB referenced below.
 										Working through through the KB takes a fair amount of time and adds the risk for error, so when I learned Nutanix nor VMware had an automated tool to translate the error, I decided to build one.
-										<br>
+										<br><br>
 										<a href="https://kb.vmware.com/s/article/1005184" target="external"><strong>Reference:</strong> <u>VMware KB - Decoding Machine Check Exception (MCE) output after a purple screen error (1005184)</u></a>
 									</p>
 									
-									<h3>How to Use:</h3>
+									<h4>How to Use:</h4>
 									Simply input <strong>the last 4 characters</strong> of the MCi_STATUS code below and click Debug.
 								</div>
 								<br>
