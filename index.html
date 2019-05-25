@@ -123,10 +123,6 @@
 									<INPUT id="button" type="button" value="Add Class" onclick="addRow('dataTable')" />
 									<INPUT id="button" type="button" value="Remove Class" onclick="deleteRow('dataTable')" />
 								</div>
-								<div class="mobile">
-									<INPUT id="button" type="button" value="Add Class" onclick="addRow('dataTableMobile')" />
-									<INPUT id="button" type="button" value="Remove Class" onclick="deleteRowMobile('dataTableMobile')" />
-								</div>
 								<div style="overflow-x:auto;">
 
 								<div class="desktop">
@@ -198,75 +194,7 @@
 								</TABLE>
 								</div>
 
-								<div class="mobile">
-								<TABLE id="dataTableMobile" border="1" align="center">
-								 <TR>
-										<TH align:"center">CLASSES</TH>
-										<TH align:"center">DAYS  & START TIMES</TH>
-									</TR>
-									<TR>
-											<TD><br>
-													Class Name:<br>
-													<INPUT id="course" type="text" name="chk" maxlength="10" size="10"/>
-													<br><br>
-													Common Exams:<br>
-													<SELECT name="Common Exams">
-															<OPTION value="none"></OPTION>
-															<OPTION value="ACC 210">ACC 210</OPTION>
-															<OPTION value="ACC 220">ACC 220</OPTION>
-															<OPTION value="PY 205">PY 205</OPTION>
-															<OPTION value="PY 208">PY 208</OPTION>
-															<OPTION value="PY 211">PY 211</OPTION>
-															<OPTION value="PY 212">PY 212</OPTION>
-															<OPTION value="MAE 206">MAE 206</OPTION>
-															<OPTION value="ST 311">ST 311</OPTION>
-													</SELECT>
-													<br><br>
-													<INPUT id="remove" type="checkbox" name="chk"/>
-													<label for="remove">Remove</label>
-											</TD>
-											<TD>
-													Day(s):<br>
-													<INPUT id"monday" type="checkbox" name="chk"/>
-															<label for="monday">Monday</label>
-															<br>
-													<INPUT id="tuesday" type="checkbox" name="chk"/>
-															<label for="tuesday">Tuesday</label>
-															<br>
-													<INPUT id="wednesday" type="checkbox" name="chk"/>
-															<label for="wednesday">Wednesday</label>
-															<br>
-													<INPUT id="thursday" type="checkbox" name="chk"/>
-															<label for="thursday">Thursday</label>
-															<br>
-													<INPUT id="friday" type="checkbox" name="chk"/>
-															<label for="friday">Friday</label>
-															<br><br>
-															Start Time:
-													<SELECT name="Start Time">
-															<OPTION value="first">8:30 AM</OPTION>
-															<OPTION value="second">9:35 AM</OPTION>
-															<OPTION value="third">10:15 AM</OPTION>
-															<OPTION value="fourth">10:40 AM</OPTION>
-															<OPTION value="fifth">11:45 AM</OPTION>
-															<OPTION value="sixth">12:50 PM</OPTION>
-															<OPTION value="seventh">1:30 PM</OPTION>
-															<OPTION value="eighth">1:55 PM</OPTION>
-															<OPTION value="ninth">3:00 PM</OPTION>
-															<OPTION value="tenth">4:10 PM</OPTION>
-															<OPTION value="eleventh">4:30 PM</OPTION>
-															<OPTION value="twelfth">5:20 PM</OPTION>
-															<OPTION value="thirteenth">6:00 PM</OPTION>
-															<OPTION value="fourteenth">7:10 PM</OPTION>
-															<OPTION value="fifteenth">7:30 PM</OPTION>
-															<OPTION value="sixteenth">8:00 PM</OPTION>
-													</SELECT>
-											</TD>
-									</TR>
-								</TABLE>
-								</div>
 								<input class="desktop" id="button" type="button" onclick= "calculate('dataTable')" value="Show Me My Final Exam Times">
-								<input class="mobile" id="button" type="button" onclick= "calculateMobile('dataTableMobile')" value="Show Me My Final Exam Times">
 								<br>
 								</div>
 								<br>
