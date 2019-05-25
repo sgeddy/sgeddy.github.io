@@ -61,8 +61,9 @@
 						<!-- Projects -->
 							<article id="projects">
 								<h2 class="major">Projects</h2>
-								<span class="image main"><img src="images/psod_cpumce.png" alt="vmware esxi psod" /></span>
+								
 								<h3>VMware Purple Screen of Death (PSOD) Error Translator</h3>
+								<span class="image main"><img src="images/psod_cpumce.png" alt="vmware esxi psod" /></span>
 								<form class="form-group has-success" id="form">
 								<div class="instructions">
 									<p>
@@ -90,6 +91,197 @@
 								<p id="errorMeaning"><strong>ERROR MEANING: </strong><br> </p>
 								<br>
 								</form>
+								<br>
+								<h3>NC STATE FINAL EXAM TIME FINDER (2018)</h3>
+								<span class="image main"><img src="images/Exam Calendar.png" alt="nc state exam calendar" /></span>
+								<form class="form-group has-success" id="form">
+									<h4 align="left" sytle="font-weight: bold">WHY THIS TOOL WAS MADE:</h4>
+									<p align="left">
+										This tool was made after a friend missed his final exam, because he wrote down the wrong day after a late
+										 night of studying. He believes if it was easier to get his final exam times, he wouldn't have
+										made the mistake. This tool was made so you don't have to live through that the nightmare.
+									</p>
+									<h4 align="left" sytle="font-weight: bold">HOW TO USE:</h4>
+											<p align="left">1. Input your class name (optional - your class will be referenced by the row number without one).
+											<br>
+											2. Select one of the common exams if you have one. (These are exceptions to the schedule, so be sure to select one if you have one).
+											<br>
+											3. Enter the day(s) and start time for your class.
+											<br>
+											4. Press Add Class and repeat steps 1-3 for all your classes.
+											<br>
+											5. Press Show Me My Final Exam Times, and your results will be shown below.
+											<br>
+											6. Be sure to add the results to your your calendar and good luck!
+											</p>
+								</div>
+								</form>
+
+								<form id="form">
+								<br>
+								<div class="desktop" >
+									<INPUT id="button" type="button" value="Add Class" onclick="addRow('dataTable')" />
+									<INPUT id="button" type="button" value="Remove Class" onclick="deleteRow('dataTable')" />
+								</div>
+								<div class="mobile">
+									<INPUT id="button" type="button" value="Add Class" onclick="addRow('dataTableMobile')" />
+									<INPUT id="button" type="button" value="Remove Class" onclick="deleteRowMobile('dataTableMobile')" />
+								</div>
+								<div style="overflow-x:auto;">
+
+								<div class="desktop">
+								<TABLE id="dataTable" border="1" align="center">
+								 <TR>
+										<TH>CLASSES</TH>
+										<TH>COMMON EXAMS</TH>
+										<TH>DAY(S)</TH>
+										<TH>START TIME</TH>
+									</TR>
+									<TR>
+											<TD>
+													Class Name<br>
+													<INPUT id="course" type="text" name="chk" maxlength="10" size="10"/>
+													<br><br>
+													<INPUT id="remove" type="checkbox" name="chk"/>
+													<label for="remove">Remove</label>
+											</TD>
+											<TD>
+													<SELECT name="Common Exams">
+															<OPTION value="none"></OPTION>
+															<OPTION value="ACC 210">ACC 210</OPTION>
+															<OPTION value="ACC 220">ACC 220</OPTION>
+															<OPTION value="PY 205">PY 205</OPTION>
+															<OPTION value="PY 208">PY 208</OPTION>
+															<OPTION value="PY 211">PY 211</OPTION>
+															<OPTION value="PY 212">PY 212</OPTION>
+															<OPTION value="MAE 206">MAE 206</OPTION>
+															<OPTION value="ST 311">ST 311</OPTION>
+													</SELECT>
+											<TD>
+													<INPUT id"monday" type="checkbox" name="chk"/>
+															<label for="monday">Monday</label>
+															<br>
+													<INPUT id="tuesday" type="checkbox" name="chk"/>
+															<label for="tuesday">Tuesday</label>
+															<br>
+													<INPUT id="wednesday" type="checkbox" name="chk"/>
+															<label for="wednesday">Wednesday</label>
+															<br>
+													<INPUT id="thursday" type="checkbox" name="chk"/>
+															<label for="thursday">Thursday</label>
+															<br>
+													<INPUT id="friday" type="checkbox" name="chk"/>
+															<label for="friday">Friday</label>
+															<br>
+											</TD>
+											<TD>
+													<SELECT name="Start Time">
+															<OPTION value="first">8:30 AM</OPTION>
+															<OPTION value="second">9:35 AM</OPTION>
+															<OPTION value="third">10:15 AM</OPTION>
+															<OPTION value="fourth">10:40 AM</OPTION>
+															<OPTION value="fifth">11:45 AM</OPTION>
+															<OPTION value="sixth">12:50 PM</OPTION>
+															<OPTION value="seventh">1:30 PM</OPTION>
+															<OPTION value="eighth">1:55 PM</OPTION>
+															<OPTION value="ninth">3:00 PM</OPTION>
+															<OPTION value="tenth">4:10 PM</OPTION>
+															<OPTION value="eleventh">4:30 PM</OPTION>
+															<OPTION value="twelfth">5:20 PM</OPTION>
+															<OPTION value="thirteenth">6:00 PM</OPTION>
+															<OPTION value="fourteenth">7:10 PM</OPTION>
+															<OPTION value="fifteenth">7:30 PM</OPTION>
+															<OPTION value="sixteenth">8:00 PM</OPTION>
+													</SELECT>
+											</TD>
+									</TR>
+								</TABLE>
+								</div>
+
+								<div class="mobile">
+								<TABLE id="dataTableMobile" border="1" align="center">
+								 <TR>
+										<TH align:"center">CLASSES</TH>
+										<TH align:"center">DAYS  & START TIMES</TH>
+									</TR>
+									<TR>
+											<TD><br>
+													Class Name:<br>
+													<INPUT id="course" type="text" name="chk" maxlength="10" size="10"/>
+													<br><br>
+													Common Exams:<br>
+													<SELECT name="Common Exams">
+															<OPTION value="none"></OPTION>
+															<OPTION value="ACC 210">ACC 210</OPTION>
+															<OPTION value="ACC 220">ACC 220</OPTION>
+															<OPTION value="PY 205">PY 205</OPTION>
+															<OPTION value="PY 208">PY 208</OPTION>
+															<OPTION value="PY 211">PY 211</OPTION>
+															<OPTION value="PY 212">PY 212</OPTION>
+															<OPTION value="MAE 206">MAE 206</OPTION>
+															<OPTION value="ST 311">ST 311</OPTION>
+													</SELECT>
+													<br><br>
+													<INPUT id="remove" type="checkbox" name="chk"/>
+													<label for="remove">Remove</label>
+											</TD>
+											<TD>
+													Day(s):<br>
+													<INPUT id"monday" type="checkbox" name="chk"/>
+															<label for="monday">Monday</label>
+															<br>
+													<INPUT id="tuesday" type="checkbox" name="chk"/>
+															<label for="tuesday">Tuesday</label>
+															<br>
+													<INPUT id="wednesday" type="checkbox" name="chk"/>
+															<label for="wednesday">Wednesday</label>
+															<br>
+													<INPUT id="thursday" type="checkbox" name="chk"/>
+															<label for="thursday">Thursday</label>
+															<br>
+													<INPUT id="friday" type="checkbox" name="chk"/>
+															<label for="friday">Friday</label>
+															<br><br>
+															Start Time:
+													<SELECT name="Start Time">
+															<OPTION value="first">8:30 AM</OPTION>
+															<OPTION value="second">9:35 AM</OPTION>
+															<OPTION value="third">10:15 AM</OPTION>
+															<OPTION value="fourth">10:40 AM</OPTION>
+															<OPTION value="fifth">11:45 AM</OPTION>
+															<OPTION value="sixth">12:50 PM</OPTION>
+															<OPTION value="seventh">1:30 PM</OPTION>
+															<OPTION value="eighth">1:55 PM</OPTION>
+															<OPTION value="ninth">3:00 PM</OPTION>
+															<OPTION value="tenth">4:10 PM</OPTION>
+															<OPTION value="eleventh">4:30 PM</OPTION>
+															<OPTION value="twelfth">5:20 PM</OPTION>
+															<OPTION value="thirteenth">6:00 PM</OPTION>
+															<OPTION value="fourteenth">7:10 PM</OPTION>
+															<OPTION value="fifteenth">7:30 PM</OPTION>
+															<OPTION value="sixteenth">8:00 PM</OPTION>
+													</SELECT>
+											</TD>
+									</TR>
+								</TABLE>
+								</div>
+								<input class="desktop" id="button" type="button" onclick= "calculate('dataTable')" value="Show Me My Final Exam Times">
+								<input class="mobile" id="button" type="button" onclick= "calculateMobile('dataTableMobile')" value="Show Me My Final Exam Times">
+								<br>
+								</div>
+								<br>
+								<h4 align="center" sytle="font-weight: bold">YOUR FINAL EXAM TIMES:</h4>
+								<table>
+									<tr>
+										<td>
+								<p id="Finals" align="left" style="padding: 20px; font-weight:bold; font-size:x-large"> </p>
+										</td>
+									</tr>
+								</table>
+								<br>
+								<br>
+								<br>
+								</form>
 							</article>
 
 						<!-- Career -->
@@ -103,7 +295,7 @@
 							<article id="hobbies">
 								<h2 class="major">Hobbies</h2>
 								<h3>SCUBA DIVING</h3>
-								<span class="image main"><img src="images/P1222337.jpg" alt="" /></span>
+								<span class="image main"><img src="images/P1222370.jpg" alt="" /></span>
 								<h4>"I work well under pressure."</h4>
 								<p>During my 2015 / 2016 Thailand trip, I snorkeled in the ocean for the first time around the beauitful Phi Phi Islands. The reef was probably 15 or 20 feet below us, so wanting to get a closer look, I learned to dive down while equalizing the pressure in my ear cavities. It was a lot of fun, but I could only stay down for 30 seconds max, because of the higher pressure and physical exertion.<br><br>It was this day that the seeds of scuba diving were planted.</p>
 								<p>About 2 and a half years later, the seeds had taken root, and I had achieved my dream of learning to scuba. I earned my <a href="https://www.padi.com/courses/open-water-diver"> PADI Open Water Diver Certification</a> in the Fall of 2018 with <a href="http://www.carolinadivecenter.com/"> Carolina Dive Center</a> out of Raleigh, North Carolina, and shortly there after, I did my first ocean dives in Playa Del Carmen and Cozumel, Mexico. Since then, I've dove shipwrecks off the coast of North Carolina in the Graveyward of the Atlantic and formed plans to dive across the globe, including the place where it all started - Thailand.<br><br>
