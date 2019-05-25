@@ -1,0 +1,27 @@
+body {
+    background-color: lightgreen;
+}
+#form {
+  text-align: center;
+}
+#h2 {
+  text-align: left;
+}
+#h3 {
+  text-align: left;
+}
+#dataTable {
+  text-align: center;
+  table-layout: center;
+}
+
+.mobile {display: none;}
+.desktop {display: inline;}
+
+/* Smartphone Portrait and Landscape */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px){
+    .mobile {display: inline;}
+    .desktop {display: none;}
+}
