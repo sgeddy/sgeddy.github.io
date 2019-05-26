@@ -10,15 +10,29 @@ function addRow(tableID) {
         var newcell = row.insertCell(i);
 
         newcell.innerHTML = table.rows[1].cells[i].innerHTML;
-        console.log("test"+ i);
-        console.log(newcell.childNodes);
+
+        for (var j=0; j<newcell.childNodes.length; j++) {
+          newcell.childNodes[j].id = newcell.childNodes[j].id + rowCount;
+          switch(newcell.childNodes[j].type) {
+              case "text":
+                      newcell.childNodes[j].value = "";
+                      break;
+              case "checkbox":
+                      newcell.childNodes[j].checked = false;
+                      break;
+              case "select-one":
+                      newcell.childNodes[j].selectedIndex = 0;
+                      break;
+          }
+        }
+    }
         
         switch(newcell.childNodes[0].type) {
             case "text":
                     newcell.childNodes[0].value = "";
                     break;
             case "checkbox":
-                    newcell.childNodes[0].checked = false;
+                    newcell.childNodes[0].checked = true;
                     newcell.childNodes[0].id = newcell.childNodes[0].id + i;
                     break;
             case "select-one":
@@ -26,6 +40,7 @@ function addRow(tableID) {
                     newcell.childNodes[0].id = newcell.childNodes[0].id + i;
                     break;
         }
+        
     }
 }
 
