@@ -17,6 +17,8 @@ function addRow(tableID) {
                     break;
             case "checkbox":
                     newcell.childNodes[0].checked = false;
+                    newcell.childNodes[0].id = newcell.childNodes[0].id + i;
+                    console.log(newcell.childNodes[0].id);
                     break;
             case "select-one":
                     newcell.childNodes[0].selectedIndex = 0;
