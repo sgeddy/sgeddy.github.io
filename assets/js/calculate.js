@@ -11,21 +11,19 @@ function addRow(tableID) {
 
         newcell.innerHTML = table.rows[1].cells[i].innerHTML;
         console.log("test"+ i);
-        console.log(newcell.childNodes[0]);
-        console.log(newcell.childNodes[0].type);
-        console.log(newcell.childNodes[0].type.checkbox);
-        console.log(newcell.childNodes[0].type.checkbox.id);
-
+        console.log(newcell.childNodes);
+        
         switch(newcell.childNodes[0].type) {
             case "text":
                     newcell.childNodes[0].value = "";
                     break;
             case "checkbox":
                     newcell.childNodes[0].checked = false;
-                    newcell.childNodes[0].type.checkbox.id = newcell.childNodes[0].type.checkbox.id + i;
+                    newcell.childNodes[0].id = newcell.childNodes[0].id + i;
                     break;
             case "select-one":
                     newcell.childNodes[0].selectedIndex = 0;
+                    newcell.childNodes[0].id = newcell.childNodes[0].id + i;
                     break;
         }
     }
