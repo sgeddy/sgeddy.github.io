@@ -26,22 +26,6 @@ function addRow(tableID) {
           }
         }
     }
-        
-        switch(newcell.childNodes[0].type) {
-            case "text":
-                    newcell.childNodes[0].value = "";
-                    break;
-            case "checkbox":
-                    newcell.childNodes[0].checked = true;
-                    newcell.childNodes[0].id = newcell.childNodes[0].id + i;
-                    break;
-            case "select-one":
-                    newcell.childNodes[0].selectedIndex = 0;
-                    newcell.childNodes[0].id = newcell.childNodes[0].id + i;
-                    break;
-        }
-        
-    }
 }
 
 function deleteRow(tableID) {
