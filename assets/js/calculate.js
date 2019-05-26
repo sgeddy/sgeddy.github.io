@@ -10,6 +10,7 @@ function addRow(tableID) {
         var newcell = row.insertCell(i);
 
         newcell.innerHTML = table.rows[1].cells[i].innerHTML;
+        console.log("test"+ i);
         console.log(newcell.childNodes[0].id);
 
         switch(newcell.childNodes[0].type) {
