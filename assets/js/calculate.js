@@ -11,7 +11,10 @@ function addRow(tableID) {
 
         newcell.innerHTML = table.rows[1].cells[i].innerHTML;
         console.log("test"+ i);
-        console.log(newcell.childNodes[0].id);
+        console.log(newcell.childNodes[0]);
+        console.log(newcell.childNodes[0].type);
+        console.log(newcell.childNodes[0].type.checkbox);
+        console.log(newcell.childNodes[0].type.checkbox.id);
 
         switch(newcell.childNodes[0].type) {
             case "text":
@@ -19,8 +22,7 @@ function addRow(tableID) {
                     break;
             case "checkbox":
                     newcell.childNodes[0].checked = false;
-                    newcell.childNodes[0].checkbox.id = newcell.childNodes[0].checkbox.id + i;
-                    console.log(newcell.childNodes[0].id);
+                    newcell.childNodes[0].type.checkbox.id = newcell.childNodes[0].type.checkbox.id + i;
                     break;
             case "select-one":
                     newcell.childNodes[0].selectedIndex = 0;
