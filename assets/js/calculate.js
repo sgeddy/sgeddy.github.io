@@ -32,7 +32,6 @@ function deleteRow(tableID) {
 
     for(var i=1; i<rowCount; i++) {
         var row = table.rows[i];
-        console.log(row.cells[0].childNodes);
         var chkbox = row.cells[0].childNodes[8];
         if(chkbox.checked == true) {
             if(rowCount <= 2) {
