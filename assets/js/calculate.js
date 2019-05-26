@@ -655,7 +655,7 @@ function calculate(tableID) {
             }
         }
 
-        // If a common exam is not selected etermine the final exam time from checked days and class start time
+        // If a common exam is not selected, determine the final exam time from checked days and class start time
         else {
           switch(days) {
 
@@ -1004,5 +1004,7 @@ function calculate(tableID) {
         }
       }
     }
+    
+    document.getElementById("Finals").innerHTML += "<br>Was this helpful? Send your feedback to sgeddy@ncsu.edu";
 
 }
