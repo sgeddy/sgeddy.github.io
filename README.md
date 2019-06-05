@@ -1,2 +1,4 @@
 # sgeddy.github.io
-personal website
+DRAFT for personal website update.
+
+View by browsing to: https://sgeddy.github.io/#
